@@ -5,7 +5,7 @@
     type = "github";
     owner = "NixOS";
     repo = "nixpkgs";
-    ref = "nixos-23.11";
+    ref = "nixos-24.05";
   };
 
   outputs = { self, nixos }: {

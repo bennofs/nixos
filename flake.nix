@@ -14,6 +14,7 @@
       modules = [
         ./hardware-qemu.nix
         ./base.nix
+        ./custom.nix
       ];
     };
 

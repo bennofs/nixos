@@ -9,7 +9,7 @@
     ];
 
   networking.hostName = "base";
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.05";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -21,12 +21,12 @@
   boot.extraModulePackages = [ ];
   boot.kernelParams = [ "console=tty0" "console=ttyS0" ];
 
-  fileSystems."/" =
+  fileSystems."/" = lib.mkDefault
     { device = "/dev/disk/by-label/root";
       fsType = "ext4";
     };
 
-  fileSystems."/boot" =
+  fileSystems."/boot" = lib.mkDefault
     { device = "/dev/disk/by-label/esp";
       fsType = "vfat";
     };

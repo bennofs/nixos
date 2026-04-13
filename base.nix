@@ -20,6 +20,7 @@
       createHome = true;
       hashedPassword = "!";
       openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINHSmdUgwnFCO45cqmw6gXD1OzpCzIx1FaRD1PNX1vmz bennofs@m-cube"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAmb1kv+7HU1QKE53+gNxUhrggbwomC40Xjxd9hACkoo bennofs@d-cube"
       ];
     };
@@ -31,7 +32,7 @@
   programs.iftop.enable = true;
   programs.iotop.enable = true;
   environment.systemPackages = with pkgs; [
-    htop atop dstat tmux nmap ripgrep nix-index git
+    htop atop dool tmux nmap ripgrep nix-index git
     fd aria2 p7zip radare2 binutils usbutils iperf ethtool
     smartmontools file dfc fish
   ];

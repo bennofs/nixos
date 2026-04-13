@@ -23,5 +23,14 @@
       ];
     };
 
+    nixosConfigurations.base = nixos.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./hardware-qemu.nix
+        ./base.nix
+        ./custom.nix
+      ];
+    };
+
   };
 }

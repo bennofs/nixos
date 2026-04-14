@@ -28,6 +28,7 @@
 
   # admin tools
   programs.vim.defaultEditor = true;
+  programs.vim.enable = true;
   programs.mtr.enable = true;
   programs.iftop.enable = true;
   programs.iotop.enable = true;

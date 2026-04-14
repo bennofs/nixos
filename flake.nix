@@ -5,7 +5,7 @@
     type = "github";
     owner = "NixOS";
     repo = "nixpkgs";
-    ref = "nixos-25.05";
+    ref = "nixos-25.11";
   };
 
   inputs.disko.url = "github:nix-community/disko";
@@ -14,6 +14,17 @@
   outputs = { self, nixos, disko }: {
     nixosConfigurations.base-qemu = nixos.lib.nixosSystem {
       system = "x86_64-linux";
+      modules = [
+        disko.nixosModules.disko
+        ./hardware-qemu.nix
+        ./disk-config.nix
+        ./base.nix
+        ./custom.nix
+      ];
+    };
+
+    nixosConfigurations.base-qemu-aarch64 = nixos.lib.nixosSystem {
+      system = "aarch64-linux";
       modules = [
         disko.nixosModules.disko
         ./hardware-qemu.nix

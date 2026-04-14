@@ -9,7 +9,7 @@
     ];
 
   networking.hostName = "base";
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -39,6 +39,4 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   networking.useNetworkd = true;
-
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }

@@ -8,7 +8,7 @@
     [ (modulesPath + "/profiles/qemu-guest.nix")
     ];
 
-  networking.hostName = "base";
+  networking.hostName = lib.mkDefault "base";
   system.stateVersion = "25.11";
 
   # Use the systemd-boot EFI boot loader.

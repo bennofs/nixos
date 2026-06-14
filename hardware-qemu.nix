@@ -9,7 +9,7 @@
     ];
 
   networking.hostName = lib.mkDefault "base";
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;

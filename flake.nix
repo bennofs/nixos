@@ -5,7 +5,7 @@
     type = "github";
     owner = "NixOS";
     repo = "nixpkgs";
-    ref = "nixos-25.11";
+    ref = "nixos-26.05";
   };
 
   inputs.disko.url = "github:nix-community/disko";
